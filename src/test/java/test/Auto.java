@@ -14,7 +14,10 @@ public class Auto {
         int cAsientos = 0;
         for(int k = 0; k< asientos.length; k++)
         {
-            cAsientos++;
+            if(asientos[k] != null)
+            {
+                cAsientos++;
+            }
         }
         return cAsientos;
     }
