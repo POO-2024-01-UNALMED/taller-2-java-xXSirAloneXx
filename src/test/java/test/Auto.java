@@ -18,25 +18,40 @@ public class Auto {
         }
         return cAsientos;
     }
-    String verificarIntegridad(){
-        
+    String verificarIntegridad()
+    {
+        if(this.motor.registro != this.registro)
+        {
+            return "Las piezas no son originales";
+        }
         if(this.motor.registro == this.registro)
         {
-            for(int i=0; i<asientos.length;i++)
+            for(int k = 0; k< asientos.length; k++)
             {
-                if(asientos[i] != null)
+                if(asientos[k] != null)
                 {
-                    if(asientos[i].registro != registro)
+                    if(asientos[k].registro != this.registro)
                     {
                         return "Las piezas no son originales";
                     }
                 }
             }
-            return "Auto original";
+        }
+        if(this.motor.registro != this.registro)
+        {
+            for(int k = 0; k< asientos.length; k++)
+            {
+                if(asientos[k] != null)
+                {
+                    if(asientos[k].registro != this.registro)
+                    {
+                        return "Las piezas no son originales";
+                    }
+                }
+            }
         }
         else
         {
-            return "Las piezas no son originales";
+            return "Auto original";
         }
     }
-}
