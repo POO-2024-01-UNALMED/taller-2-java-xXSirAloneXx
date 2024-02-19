@@ -9,8 +9,14 @@ public class Auto {
     int registro;
     static int cantidadCreados;
 
-    int cantidadAsientos(){
-
+    int cantidadAsientos()
+    {
+        int cAsientos = 0;
+        for(int k = 0; k< asientos.length; k++)
+        {
+            cAsientos++;
+        }
+        return cAsientos;
     }
     String verificarIntegridad(){
         String w = "SI";
